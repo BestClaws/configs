@@ -5,3 +5,7 @@
 
 # changes the default prompt to shorten home directory to `~`:
 function prompt { "$((''+$PWD).replace($HOME, '~')) >> " }
+
+Remove-Item alias:\ls
+function ls { (Get-ChildItem -n) -split "`n" -join " " }
+
