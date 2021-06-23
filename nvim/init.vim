@@ -11,6 +11,14 @@ let mapleader = " "
 nmap <leader>w <C-w>
 nnoremap <silent> <Esc> <Esc>:noh<CR>
 
+
+" ------
+" misc
+" -------
+
+" set mouse=a
+" set guifont=Fira\ Code:h12
+
 " --------------
 " SECTION PLUGINS
 " --------------
@@ -48,11 +56,13 @@ set number
 
 set background=dark
 
-" enable true colors
+" enable (24bit) true colors 
 set termguicolors
 
+
+
 " turn off vim background color (both in term and gui) (windows terminal works on guibg apparently)
-autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 
 
 " colorscheme gruvbox
@@ -98,7 +108,7 @@ nmap <leader>r :RustRun<CR>
 
 
 
-" Enable type inlay hints (doesnt work without without enabling LS)
+" Enable type inlay hints
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 
